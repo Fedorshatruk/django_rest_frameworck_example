@@ -18,6 +18,7 @@ from django.urls import path
 from rest_framework.routers import SimpleRouter
 
 from store.views import BookViewSet
+from .yasg import urlpatterns as doc_urls
 
 router = SimpleRouter()
 
@@ -29,3 +30,4 @@ urlpatterns = [
 ]
 
 urlpatterns += router.urls
+urlpatterns += doc_urls
